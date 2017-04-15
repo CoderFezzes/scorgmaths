@@ -1,0 +1,22 @@
+{{
+  var ejsUp = 'This message was placed here by ejs';
+}}
+
+{{include inc.start.html}}
+
+<h1 class="main">Scorgie's Mathematical Machine</h1>
+<h3>Because why get a human to help when a machine will do it better?</h3>
+
+<div class="entry">
+	<div class="solve">
+		<h5>Enter an equation to solve in the box below.</h5>
+		<form action="game" method="post">
+			<input type="text" name="name" placeholder="Your Equation">
+			<input type="submit">
+		</form>
+	</div>
+</div>
+
+{{include inc.css.html}}
+
+{{include inc.end.html}}

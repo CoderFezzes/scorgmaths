@@ -1,0 +1,23 @@
+{
+  "name": "ez-ejs",
+  "description": "A simple deployment of ejs that allows includes directly in the context of standard html",
+  "author": "Jeremy Huff <jeremythuff@gmail.com>",
+  "keywords": [
+    "ejs",
+    "Node.js",
+    "includes"
+  ],
+  "dependencies": {
+    "ejs": "0.8.4",
+    "express": "3.2.4",
+    "mathsteps": "^0.1.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.4.1",
+    "npm": ">= 1.0.0"
+  }
+}

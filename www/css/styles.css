@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300|UnifrakturCook:700');
+
+body {
+  font-family: 'Roboto Slab', arial, sans-serif;
+}
+h1 {
+  font-family: 'UnifrakturCook'
+}
