@@ -39,7 +39,7 @@ server.all("*", function(req, res, next) {
 server.locals.mathsteps = mathsteps;
 
 server.post('/game', function (req, res) {
-    res.render('other', { name: req.body.name });
+    res.render('other', { name: { entry: req.body.name, type: req.body.type } });
 });
 
 console.log("Stuff is happening.")

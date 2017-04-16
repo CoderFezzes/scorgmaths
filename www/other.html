@@ -1,15 +1,32 @@
 {{include inc.start.html}}
-    {{ const steps = mathsteps.solveEquation(name); }}
+    {{
+      var steps;
+      if(name.type == 'solve') {
+        steps = mathsteps.solveEquation(name.entry);
+      }
+      else {
+        steps = mathsteps.simplifyExpression(name.entry);
+      }
+    }}
 
     <h1>Done.</h1>
     <h4>If there's nothing there, the Scorgie AI has just decided that you're being lazy, and wants you to do it.</h4>
 
     <ul class="result">
-    	{{ steps.forEach(step => { }}
-        <li> {{= step.oldEquation.print() }} </li>
-        <li> {{= step.changeType.split('_').join(' ') }} </li>
-        <li> {{= step.newEquation.print() }} </li>
-    	{{ }); }}
+      {{ if(name.type == 'solve') { }}
+    	  {{ steps.forEach(step => { }}
+          <li> {{= step.oldEquation.print() }} </li>
+          <li> {{= step.changeType.split('_').join(' ') }} </li>
+          <li> {{= step.newEquation.print() }} </li>
+    	  {{ }); }}
+      {{ } }}
+      {{ if(name.type == 'simplify') { }}
+        {{ steps.forEach(step => { }}
+          <li> {{= step.oldNode }} </li>
+          <li> {{= step.changeType.split('_').join(' ') }} </li>
+          <li> {{= step.newNode }} </li>
+        {{ }); }}
+      {{ } }}
     </ul>
 
 {{include inc.css.html}}
