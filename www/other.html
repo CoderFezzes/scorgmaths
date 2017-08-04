@@ -1,5 +1,8 @@
 {{include inc.start.html}}
     {{
+	  function toTitleCase(str){
+		return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+	  }
       var steps;
       if(name.type == 'solve') {
         steps = mathsteps.solveEquation(name.entry);
@@ -16,14 +19,14 @@
       {{ if(name.type == 'solve') { }}
     	  {{ steps.forEach(step => { }}
           <li> {{= step.oldEquation.print() }} </li>
-          <li> {{= step.changeType.split('_').join(' ') }} </li>
+          <li> {{= toTitleCase(step.changeType.split('_').join(' ')) }} </li>
           <li> {{= step.newEquation.print() }} </li>
     	  {{ }); }}
       {{ } }}
       {{ if(name.type == 'simplify') { }}
         {{ steps.forEach(step => { }}
           <li> {{= step.oldNode }} </li>
-          <li> {{= step.changeType.split('_').join(' ') }} </li>
+          <li> {{= toTitleCase(step.changeType.split('_').join(' ')) }} </li>
           <li> {{= step.newNode }} </li>
         {{ }); }}
       {{ } }}
