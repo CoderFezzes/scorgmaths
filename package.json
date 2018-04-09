@@ -1,11 +1,12 @@
 {
-  "name": "ez-ejs",
-  "description": "A simple deployment of ejs that allows includes directly in the context of standard html",
-  "author": "Jeremy Huff <jeremythuff@gmail.com>",
+  "name": "scorgmaths",
+  "description": "A fairly unneccesary use of a backend to compute the Socratic algorithm",
+  "author": "Kyle Scorgie",
   "keywords": [
     "ejs",
     "Node.js",
-    "includes"
+    "includes",
+    "Mathematics"
   ],
   "dependencies": {
     "ejs": "0.8.4",
