@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Scorgie's Maths</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+    
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="bundled.js"></script>
+        <script src="client.js"></script>
+        <h1 class="main">Scorgie's Mathematical Machine</h1>
+        <h3>Because why get a human to help when a machine will do it better?</h3>
+
+        <div class="entry">
+	        <div class="solve">
+		        <h5>Enter an equation to solve in the box below.</h5>
+                <h5 id="help">(By the way, if entering a fraction, for example one half, write it as 1 / 2)</h5>
+	            <h5 id="halp">(Also, if writing something to the power of (e.g squared (^2), cubed (^3)) use the ^ symbol. Just hold Shift and press 6 to use it.)</h5>
+                <div class="formandstuff">
+                    <div class="inner">
+  			            <input type="text" name="name" placeholder="Your Equation" id="equation"/>
+  			            <input class="btn-floating btn-large waves-effect waves-light green" type="button" value="✓" id="thatThereButton" onClick='goSolveIt()'/>
+                    </div>
+                </div>
+	        </div>
+        </div>
+        <ul id='output'></ul>
+        <div class="ver">
+            <p>V1.2 "Frog" 🐸</p>
+        </div>
+    </body>
+</html>

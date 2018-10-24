@@ -1,24 +1,15 @@
 {
-  "name": "scorgmaths",
-  "description": "A fairly unneccesary use of a backend to compute the Socratic algorithm",
+  "name": "scorg-maths",
+  "version": "1.2.0",
+  "description": "Using jQuery to client-side the MathSteps processes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Kyle Scorgie",
-  "keywords": [
-    "ejs",
-    "Node.js",
-    "includes",
-    "Mathematics"
-  ],
+  "license": "ISC",
   "dependencies": {
     "ejs": "0.8.4",
-    "express": "3.2.4",
-    "mathsteps": "^0.1.6"
-  },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
-  "engines": {
-    "node": ">= 0.4.1",
-    "npm": ">= 1.0.0"
+    "express": "3.2.4"
   }
 }
