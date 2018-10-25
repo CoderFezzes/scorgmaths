@@ -1,0 +1,28 @@
+{{
+  var ejsUp = 'This message was placed here by ejs';
+}}
+
+{{include inc.start.html}}
+
+<h1 class="main">Scorgie's Mathematical Machine</h1>
+<h3>Because why get a human to help when a machine will do it better?</h3>
+
+<div class="entry">
+	<div class="solve">
+		<h5>Enter an equation to solve in the box below.</h5>
+    <h5 id="help">(By the way, if entering a fraction, for example one half, write it as 1 / 2)</h5>
+	<h5 id="halp">(Also, if writing something to the power of (e.g squared (^2), cubed (^3)) use the ^ symbol. Just hold Shift and press 6 to use it.)</h5>
+  <div class="formandstuff">
+    <div class="inner">
+      <form action="game" method="post">
+  			<input type="text" name="name" placeholder="Your Equation" id="enterThatStuff"/>
+        <input type="radio" name="type" value="simplify" id="type1"/> <label for="type1">Standard (e.g 11 - 2 or 2x + 6x -7x)</label>
+        <input type="radio" name="type" value="solve" id="type2"/> <label for="type2" id="thatImportantLabel">Algebra (e.g 2x - y = x)</label>
+  			<input class="btn-floating btn-large waves-effect waves-light green" type="submit" value="✓" id="thatThereButton"/>
+  		</form>
+    </div>
+  </div>
+	</div>
+</div>
+
+{{include inc.end.html}}

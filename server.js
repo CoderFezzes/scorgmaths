@@ -1,6 +1,8 @@
 var express = require('express')
   ,	ejs = 	require('ejs');
 
+const mathsteps = require('mathsteps');
+
 ejs.open 	= 	'{{';
 ejs.close 	= 	'}}';
 
@@ -17,8 +19,8 @@ server.configure(function(){
   server.engine('html', require('ejs').renderFile);
   server.use(server.router);
   server.set('view engine', 'html');
-  server.set('views', __dirname );
-  server.use(express.static(__dirname, { maxAge: oneDay }));
+  server.set('views', __dirname + "/www");
+  server.use(express.static(__dirname + '/www', { maxAge: oneDay }));
 });
 
 server.all("*", function(req, res, next) {
@@ -32,6 +34,12 @@ server.all("*", function(req, res, next) {
 	} else {
 		next();
 	}
+});
+
+server.locals.mathsteps = mathsteps;
+
+server.post('/game', function (req, res) {
+    res.render('other', { name: { entry: req.body.name, type: req.body.type } });
 });
 
 console.log("Stuff is happening.")
